@@ -1,0 +1,60 @@
+#!/bin/bash --login
+
+#PBS -A RRFS-DEV
+#PBS -q dev_transfer
+#PBS -l select=1:ncpus=1:mem=2G
+#PBS -l walltime=05:00:00
+#PBS -j oe -o log.gdasenkf
+#PBS -N hpss_gdasenkf
+
+set -x
+module load hpss
+
+YYYY=2022
+MM=07
+
+mkdir -p /lfs/h2/emc/lam/noscrub/emc.lam/rrfs_retro_data/stage/enkf/atm
+cd /lfs/h2/emc/lam/noscrub/emc.lam/rrfs_retro_data/stage/enkf/atm
+
+for DD in 25; do
+for HH in 00 06 12 18; do 
+
+
+  cyc=${YYYY}${MM}${DD}
+  JDATE=`date -d  "${cyc:0:8} $HH" +%y%j%H00`
+  echo $YYYY $MM $DD $HH $JDATE
+
+
+HPSSDIR=/NCEPPROD/5year/hpssprod/runhistory/rh${YYYY}/${YYYY}${MM}/${YYYY}${MM}${DD}
+
+#make links
+for k in $(seq -w 1 80); do
+  #ln -sf ./enkfgdas.${YYYY}${MM}${DD}/${HH}/mem0${k}/gdas.t${HH}z.atmf009.nemsio ${JDATE}.gdas.t${HH}z.atmf009s.mem0${k}.nemsio  # 2020
+  ln -sf ./enkfgdas.${YYYY}${MM}${DD}/${HH}/atmos/mem0${k}/gdas.t${HH}z.atmf009.nc ${JDATE}.gdas.t${HH}z.atmf009.mem0${k}.nc     # 2021--now
+done
+
+
+#extract fv3GDAS 80 members
+for i in $(seq 1 8); do
+#for i in $(seq 3 3); do
+
+  if [[ $(( i % 3 )) -eq 0 ]]; then
+    echo "-----------wait--------------"
+    wait #only 3 cocurrent hpss sessions allowed
+  fi
+
+  #tarfile=${HPSSDIR}/gpfs_dell1_nco_ops_com_gfs_prod_enkfgdas.${YYYY}${MM}${DD}_${HH}.enkfgdas_grp${i}.tar    # 2020
+  #tarfile=${HPSSDIR}/com_gfs_prod_enkfgdas.${YYYY}${MM}${DD}_${HH}.enkfgdas_grp${i}.tar                        # 2021 
+  tarfile=${HPSSDIR}/com_gfs_v16.2_enkfgdas.${YYYY}${MM}${DD}_${HH}.enkfgdas_grp${i}.tar                        # start from July 2022, tar file name changed 
+  k1=$(( $i * 10 -9  )); k2=$(( $i*10  ))
+  members=''
+  for k in $(seq -w $k1 $k2); do
+    #members="${members} ./enkfgdas.${YYYY}${MM}${DD}/${HH}/mem0${k}/gdas.t${HH}z.atmf009.nemsio"              # 2020
+    members="${members} ./enkfgdas.${YYYY}${MM}${DD}/${HH}/atmos/mem0${k}/gdas.t${HH}z.atmf009.nc"             # 2021--now
+  done
+  /usr/local/bin/htar -xvf $tarfile $members
+
+done
+
+done
+done

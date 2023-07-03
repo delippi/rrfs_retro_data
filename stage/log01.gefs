@@ -1,0 +1,386 @@
+Running prologue on parent mom node: cdxfer04...
+Job 66474289.cbqs01 nodelist: cdxfer04
+++ sourcedir1=/BMC/fdr/Permanent/
+++ sourcedir2=/grib/gens_pgrb2b
+++ sourcedir3=/7/2/107/0_259920_0/
+++ stagedir=/lfs/h2/emc/da/noscrub/donald.e.lippi/rrfs_retro_data/stage/GEFS/dsg
+++ for yyyymmdd in 20220720
+++ yyyy=2022
+++ yy=22
+++ mm=07
+++ dd=20
++++ date --date=20220720 +%j
+++ doy=201
++++ seq -w 23 23
+++ for mem in $(seq -w 23 23)
+++ mkdir -p /lfs/h2/emc/da/noscrub/donald.e.lippi/rrfs_retro_data/stage/GEFS/dsg/gep23
+++ cd /lfs/h2/emc/da/noscrub/donald.e.lippi/rrfs_retro_data/stage/GEFS/dsg/gep23
++++ seq -w 18 18
+++ for hh in $(seq -w 18 18)
+++ '[' '!' -s /lfs/h2/emc/da/noscrub/donald.e.lippi/rrfs_retro_data/stage/GEFS/dsg/gep23/2220118000000 ']'
+++ echo hsi get /BMC/fdr/Permanent//2022/07/20//grib/gens_pgrb2b/gep23//7/2/107/0_259920_0//202207201800.zip
+hsi get /BMC/fdr/Permanent//2022/07/20//grib/gens_pgrb2b/gep23//7/2/107/0_259920_0//202207201800.zip
+++ hsi get /BMC/fdr/Permanent//2022/07/20//grib/gens_pgrb2b/gep23//7/2/107/0_259920_0//202207201800.zip
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+******************************************************************
+*   Welcome to the NESCC High Performance Storage System         *
+*                                                                *
+*   Current HPSS version: 9.3.10                                 * 
+*                                                                * 
+*       Please Submit Helpdesk Request to                        *
+*        rdhpcs.hpss.help@noaa.gov                               *
+*                                                                *
+******************************************************************
+Username: Donald.E.Lippi  UID: 40634  Acct: 40634(40634) Copies: 1 COS: 0 Firewall: off [hsi.9.3.0.p0 Wed Oct 5 08:55:51 EDT 2022] 
+/BMC/fdr/Permanent//2022/07/20//grib/gens_pgrb2b/gep23//7/2/107/0_259920_0//202207201800.zip: (md5) OK
+get  '/lfs/h2/emc/da/noscrub/donald.e.lippi/rrfs_retro_data/stage/GEFS/dsg/gep23/202207201800.zip' : '/BMC/fdr/Permanent//2022/07/20//grib/gens_pgrb2b/gep23//7/2/107/0_259920_0//202207201800.zip' (2022/07/21 12:48:53 12136829517 bytes, 221591.1 KBS )
+++ '[' 0 -eq 0 ']'
+++ echo y
+++ unzip -o 202207201800.zip
+Archive:  202207201800.zip
+ extracting: 2220118000000           
+ extracting: 2220118000003           
+ extracting: 2220118000006           
+ extracting: 2220118000009           
+ extracting: 2220118000012           
+ extracting: 2220118000015           
+ extracting: 2220118000018           
+ extracting: 2220118000021           
+ extracting: 2220118000024           
+ extracting: 2220118000027           
+ extracting: 2220118000030           
+ extracting: 2220118000033           
+ extracting: 2220118000036           
+ extracting: 2220118000039           
+ extracting: 2220118000042           
+ extracting: 2220118000045           
+ extracting: 2220118000048           
+ extracting: 2220118000051           
+ extracting: 2220118000054           
+ extracting: 2220118000057           
+ extracting: 2220118000060           
+ extracting: 2220118000063           
+ extracting: 2220118000066           
+ extracting: 2220118000069           
+ extracting: 2220118000072           
+ extracting: 2220118000075           
+ extracting: 2220118000078           
+ extracting: 2220118000081           
+ extracting: 2220118000084           
+ extracting: 2220118000087           
+ extracting: 2220118000090           
+ extracting: 2220118000093           
+ extracting: 2220118000096           
+ extracting: 2220118000099           
+ extracting: 2220118000102           
+ extracting: 2220118000105           
+ extracting: 2220118000108           
+ extracting: 2220118000111           
+ extracting: 2220118000114           
+ extracting: 2220118000117           
+ extracting: 2220118000120           
+ extracting: 2220118000123           
+ extracting: 2220118000126           
+ extracting: 2220118000129           
+ extracting: 2220118000132           
+ extracting: 2220118000135           
+ extracting: 2220118000138           
+ extracting: 2220118000141           
+ extracting: 2220118000144           
+ extracting: 2220118000147           
+ extracting: 2220118000150           
+ extracting: 2220118000153           
+ extracting: 2220118000156           
+ extracting: 2220118000159           
+ extracting: 2220118000162           
+ extracting: 2220118000165           
+ extracting: 2220118000168           
+ extracting: 2220118000171           
+ extracting: 2220118000174           
+ extracting: 2220118000177           
+ extracting: 2220118000180           
+ extracting: 2220118000183           
+ extracting: 2220118000186           
+ extracting: 2220118000189           
+ extracting: 2220118000192           
+ extracting: 2220118000195           
+ extracting: 2220118000198           
+ extracting: 2220118000201           
+ extracting: 2220118000204           
+ extracting: 2220118000207           
+ extracting: 2220118000210           
+ extracting: 2220118000213           
+ extracting: 2220118000216           
+ extracting: 2220118000219           
+ extracting: 2220118000222           
+ extracting: 2220118000225           
+ extracting: 2220118000228           
+ extracting: 2220118000231           
+ extracting: 2220118000234           
+ extracting: 2220118000237           
+ extracting: 2220118000240           
+ extracting: 2220118000246           
+ extracting: 2220118000252           
+ extracting: 2220118000258           
+ extracting: 2220118000264           
+ extracting: 2220118000270           
+ extracting: 2220118000276           
+ extracting: 2220118000282           
+ extracting: 2220118000288           
+ extracting: 2220118000294           
+ extracting: 2220118000300           
+ extracting: 2220118000306           
+ extracting: 2220118000312           
+ extracting: 2220118000318           
+ extracting: 2220118000324           
+ extracting: 2220118000330           
+ extracting: 2220118000336           
+ extracting: 2220118000342           
+ extracting: 2220118000348           
+ extracting: 2220118000354           
+ extracting: 2220118000360           
+ extracting: 2220118000366           
+ extracting: 2220118000372           
+ extracting: 2220118000378           
+ extracting: 2220118000384           
+++ rm -f 202207201800.zip
+++ rm -f 2220118000300 2220118000306 2220118000312 2220118000318 2220118000324 2220118000330 2220118000336 2220118000342 2220118000348 2220118000354 2220118000360 2220118000366 2220118000372 2220118000378 2220118000384 2220118000201 2220118000204 2220118000207 2220118000210 2220118000213 2220118000216 2220118000219 2220118000222 2220118000225 2220118000228 2220118000231 2220118000234 2220118000237 2220118000240 2220118000246 2220118000252 2220118000258 2220118000264 2220118000270 2220118000276 2220118000282 2220118000288 2220118000294
+Cgroup mem limit exceeded: t
+##### Job 66474289.cbqs01 - PBS Job Script:
+
+##!/bin/bash --login
+
+#PBS -A RRFS-DEV
+#PBS -q dev_transfer
+#PBS -l select=1:ncpus=1:mem=8G
+#PBS -l walltime=06:00:00
+#PBS -j oe -o log01.gefs
+#PBS -N hpss_gefs
+
+set -x
+
+sourcedir1=/BMC/fdr/Permanent/
+sourcedir2=/grib/gens_pgrb2b
+sourcedir3=/7/2/107/0_259920_0/
+#stagedir=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs_retro_data/stage/GEFS/dsg
+stagedir=/lfs/h2/emc/da/noscrub/donald.e.lippi/rrfs_retro_data/stage/GEFS/dsg
+#/BMC/fdr/Permanent/2022/07/20/grib/gens_pgrb2b/gep23/7/2/107/0_259920_0
+
+for yyyymmdd in 20220720; do
+#for yyyymmdd in 20220719 20220720 20220721 20220722 20220723 20220724 20220725 ; do
+#for yyyymmdd in 20220726 20220725 20220724 20220723 20220722 20220721 20220720 20220719 ; do
+
+  yyyy="${yyyymmdd:0:4}"
+  yy="${yyyymmdd:2:2}"
+  mm="${yyyymmdd:4:2}"
+  dd="${yyyymmdd:6:2}"
+  doy=`date  --date=$yyyymmdd +%j `
+
+  #for mem in $(seq -w 1 10);  do
+  for mem in $(seq -w 23 23);  do
+    mkdir -p $stagedir/gep${mem}
+    cd $stagedir/gep${mem}
+    #for hh in $(seq -w 0 6 18) ; do
+    for hh in $(seq -w 18 18) ; do
+      if [ ! -s $stagedir/gep${mem}/${yy}${doy}${hh}000000 ] ; then
+        echo hsi get  "$sourcedir1/$yyyy/$mm/$dd/$sourcedir2/gep${mem}/$sourcedir3/${yyyymmdd}${hh}00.zip"
+        hsi get  $sourcedir1/$yyyy/$mm/$dd/$sourcedir2/gep${mem}/$sourcedir3/${yyyymmdd}${hh}00.zip
+        if [ $? -eq 0 ]; then
+          echo y | unzip -o ${yyyymmdd}${hh}00.zip
+          rm -f ${yyyymmdd}${hh}00.zip
+          rm -f ${yy}${doy}${hh}0003??  ${yy}${doy}${hh}0002??   
+        fi
+      fi
+    done
+  done
+
+done
+
+#
+
+##### End of job script
+------------------------------------------------------------------
+Running prologue on parent mom node: cdxfer03...
+Job 66474645.cbqs01 nodelist: cdxfer03
+++ sourcedir1=/BMC/fdr/Permanent/
+++ sourcedir2=/grib/gens_pgrb2b
+++ sourcedir3=/7/2/107/0_259920_0/
+++ stagedir=/lfs/h2/emc/da/noscrub/donald.e.lippi/rrfs_retro_data/stage/GEFS/dsg
+++ for yyyymmdd in 20220720
+++ yyyy=2022
+++ yy=22
+++ mm=07
+++ dd=20
++++ date --date=20220720 +%j
+++ doy=201
++++ seq -w 23 23
+++ for mem in $(seq -w 23 23)
+++ mkdir -p /lfs/h2/emc/da/noscrub/donald.e.lippi/rrfs_retro_data/stage/GEFS/dsg/gep23
+++ cd /lfs/h2/emc/da/noscrub/donald.e.lippi/rrfs_retro_data/stage/GEFS/dsg/gep23
++++ seq -w 12 12
+++ for hh in $(seq -w 12 12)
+++ '[' '!' -s /lfs/h2/emc/da/noscrub/donald.e.lippi/rrfs_retro_data/stage/GEFS/dsg/gep23/2220112000000 ']'
+++ echo hsi get /BMC/fdr/Permanent//2022/07/20//grib/gens_pgrb2b/gep23//7/2/107/0_259920_0//202207201200.zip
+hsi get /BMC/fdr/Permanent//2022/07/20//grib/gens_pgrb2b/gep23//7/2/107/0_259920_0//202207201200.zip
+++ hsi get /BMC/fdr/Permanent//2022/07/20//grib/gens_pgrb2b/gep23//7/2/107/0_259920_0//202207201200.zip
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+******************************************************************
+*   Welcome to the NESCC High Performance Storage System         *
+*                                                                *
+*   Current HPSS version: 9.3.10                                 * 
+*                                                                * 
+*       Please Submit Helpdesk Request to                        *
+*        rdhpcs.hpss.help@noaa.gov                               *
+*                                                                *
+******************************************************************
+Username: Donald.E.Lippi  UID: 40634  Acct: 40634(40634) Copies: 1 COS: 0 Firewall: off [hsi.9.3.0.p0 Wed Oct 5 08:55:51 EDT 2022] 
+*** no such HPSS file: /BMC/fdr/Permanent//2022/07/20//grib/gens_pgrb2b/gep23//7/2/107/0_259920_0//202207201200.zip
+###WARNING  hsi returned non-zero exit status.
+            72 = /apps/prod/hpss/bin/hsi get /BMC/fdr/Permanent//2022/07/20//grib/gens_pgrb2b/gep23//7/2/107/0_259920_0//202207201200.zip
+++ '[' 72 -eq 0 ']'
+##### Job 66474645.cbqs01 - PBS Job Script:
+
+##!/bin/bash --login
+
+#PBS -A RRFS-DEV
+#PBS -q dev_transfer
+#PBS -l select=1:ncpus=1:mem=8G
+#PBS -l walltime=06:00:00
+#PBS -j oe -o log01.gefs
+#PBS -N hpss_gefs
+
+set -x
+
+sourcedir1=/BMC/fdr/Permanent/
+sourcedir2=/grib/gens_pgrb2b
+sourcedir3=/7/2/107/0_259920_0/
+#stagedir=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs_retro_data/stage/GEFS/dsg
+stagedir=/lfs/h2/emc/da/noscrub/donald.e.lippi/rrfs_retro_data/stage/GEFS/dsg
+#/BMC/fdr/Permanent/2022/07/20/grib/gens_pgrb2b/gep23/7/2/107/0_259920_0
+
+for yyyymmdd in 20220720; do
+#for yyyymmdd in 20220719 20220720 20220721 20220722 20220723 20220724 20220725 ; do
+#for yyyymmdd in 20220726 20220725 20220724 20220723 20220722 20220721 20220720 20220719 ; do
+
+  yyyy="${yyyymmdd:0:4}"
+  yy="${yyyymmdd:2:2}"
+  mm="${yyyymmdd:4:2}"
+  dd="${yyyymmdd:6:2}"
+  doy=`date  --date=$yyyymmdd +%j `
+
+  #for mem in $(seq -w 1 10);  do
+  for mem in $(seq -w 23 23);  do
+    mkdir -p $stagedir/gep${mem}
+    cd $stagedir/gep${mem}
+    #for hh in $(seq -w 0 6 18) ; do
+    for hh in $(seq -w 12 12) ; do
+      if [ ! -s $stagedir/gep${mem}/${yy}${doy}${hh}000000 ] ; then
+        echo hsi get  "$sourcedir1/$yyyy/$mm/$dd/$sourcedir2/gep${mem}/$sourcedir3/${yyyymmdd}${hh}00.zip"
+        hsi get  $sourcedir1/$yyyy/$mm/$dd/$sourcedir2/gep${mem}/$sourcedir3/${yyyymmdd}${hh}00.zip
+        if [ $? -eq 0 ]; then
+          echo y | unzip -o ${yyyymmdd}${hh}00.zip
+          rm -f ${yyyymmdd}${hh}00.zip
+          rm -f ${yy}${doy}${hh}0003??  ${yy}${doy}${hh}0002??   
+        fi
+      fi
+    done
+  done
+
+done
+
+#
+
+##### End of job script
+------------------------------------------------------------------
+Running prologue on parent mom node: cdxfer01...
+Job 66474724.cbqs01 nodelist: cdxfer01
+++ sourcedir1=/BMC/fdr/Permanent/
+++ sourcedir2=/grib/gens_pgrb2b
+++ sourcedir3=/7/2/107/0_259920_0/
+++ stagedir=/lfs/h2/emc/da/noscrub/donald.e.lippi/rrfs_retro_data/stage/GEFS/dsg
+++ for yyyymmdd in 20220720
+++ yyyy=2022
+++ yy=22
+++ mm=07
+++ dd=20
++++ date --date=20220720 +%j
+++ doy=201
++++ seq -w 23 23
+++ for mem in $(seq -w 23 23)
+++ mkdir -p /lfs/h2/emc/da/noscrub/donald.e.lippi/rrfs_retro_data/stage/GEFS/dsg/gep23
+++ cd /lfs/h2/emc/da/noscrub/donald.e.lippi/rrfs_retro_data/stage/GEFS/dsg/gep23
++++ seq -w 6 6
+++ for hh in $(seq -w  6 6)
+++ '[' '!' -s /lfs/h2/emc/da/noscrub/donald.e.lippi/rrfs_retro_data/stage/GEFS/dsg/gep23/222016000000 ']'
+++ echo hsi get /BMC/fdr/Permanent//2022/07/20//grib/gens_pgrb2b/gep23//7/2/107/0_259920_0//20220720600.zip
+hsi get /BMC/fdr/Permanent//2022/07/20//grib/gens_pgrb2b/gep23//7/2/107/0_259920_0//20220720600.zip
+++ hsi get /BMC/fdr/Permanent//2022/07/20//grib/gens_pgrb2b/gep23//7/2/107/0_259920_0//20220720600.zip
+[connecting to hpsscore1.fairmont.rdhpcs.noaa.gov/1217]
+******************************************************************
+*   Welcome to the NESCC High Performance Storage System         *
+*                                                                *
+*   Current HPSS version: 9.3.10                                 * 
+*                                                                * 
+*       Please Submit Helpdesk Request to                        *
+*        rdhpcs.hpss.help@noaa.gov                               *
+*                                                                *
+******************************************************************
+Username: Donald.E.Lippi  UID: 40634  Acct: 40634(40634) Copies: 1 COS: 0 Firewall: off [hsi.9.3.0.p0 Wed Oct 5 08:55:51 EDT 2022] 
+*** no such HPSS file: /BMC/fdr/Permanent//2022/07/20//grib/gens_pgrb2b/gep23//7/2/107/0_259920_0//20220720600.zip
+###WARNING  hsi returned non-zero exit status.
+            72 = /apps/prod/hpss/bin/hsi get /BMC/fdr/Permanent//2022/07/20//grib/gens_pgrb2b/gep23//7/2/107/0_259920_0//20220720600.zip
+++ '[' 72 -eq 0 ']'
+##### Job 66474724.cbqs01 - PBS Job Script:
+
+##!/bin/bash --login
+
+#PBS -A RRFS-DEV
+#PBS -q dev_transfer
+#PBS -l select=1:ncpus=1:mem=8G
+#PBS -l walltime=06:00:00
+#PBS -j oe -o log01.gefs
+#PBS -N hpss_gefs
+
+set -x
+
+sourcedir1=/BMC/fdr/Permanent/
+sourcedir2=/grib/gens_pgrb2b
+sourcedir3=/7/2/107/0_259920_0/
+#stagedir=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs_retro_data/stage/GEFS/dsg
+stagedir=/lfs/h2/emc/da/noscrub/donald.e.lippi/rrfs_retro_data/stage/GEFS/dsg
+#/BMC/fdr/Permanent/2022/07/20/grib/gens_pgrb2b/gep23/7/2/107/0_259920_0
+
+for yyyymmdd in 20220720; do
+#for yyyymmdd in 20220719 20220720 20220721 20220722 20220723 20220724 20220725 ; do
+#for yyyymmdd in 20220726 20220725 20220724 20220723 20220722 20220721 20220720 20220719 ; do
+
+  yyyy="${yyyymmdd:0:4}"
+  yy="${yyyymmdd:2:2}"
+  mm="${yyyymmdd:4:2}"
+  dd="${yyyymmdd:6:2}"
+  doy=`date  --date=$yyyymmdd +%j `
+
+  #for mem in $(seq -w 1 10);  do
+  for mem in $(seq -w 23 23);  do
+    mkdir -p $stagedir/gep${mem}
+    cd $stagedir/gep${mem}
+    #for hh in $(seq -w 0 6 18) ; do
+    for hh in $(seq -w  6 6) ; do
+      if [ ! -s $stagedir/gep${mem}/${yy}${doy}${hh}000000 ] ; then
+        echo hsi get  "$sourcedir1/$yyyy/$mm/$dd/$sourcedir2/gep${mem}/$sourcedir3/${yyyymmdd}${hh}00.zip"
+        hsi get  $sourcedir1/$yyyy/$mm/$dd/$sourcedir2/gep${mem}/$sourcedir3/${yyyymmdd}${hh}00.zip
+        if [ $? -eq 0 ]; then
+          echo y | unzip -o ${yyyymmdd}${hh}00.zip
+          rm -f ${yyyymmdd}${hh}00.zip
+          rm -f ${yy}${doy}${hh}0003??  ${yy}${doy}${hh}0002??   
+        fi
+      fi
+    done
+  done
+
+done
+
+#
+
+##### End of job script
+------------------------------------------------------------------
