@@ -10,7 +10,8 @@
 module load hpss
 set -x
 
-stagedir=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs_retro_data/stage
+#stagedir=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs_retro_data/stage
+stagedir=/lfs/h2/emc/da/noscrub/donald.e.lippi/rrfs_retro_data/stage/
 mkdir -p ${stagedir}/rap_hrrr_soil
 cd ${stagedir}/rap_hrrr_soil
 

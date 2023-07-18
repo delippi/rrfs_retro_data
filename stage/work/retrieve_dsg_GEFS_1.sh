@@ -16,7 +16,7 @@ sourcedir3=/7/2/107/0_259920_0/
 stagedir=/lfs/h2/emc/da/noscrub/donald.e.lippi/rrfs_retro_data/stage/GEFS/dsg
 #/BMC/fdr/Permanent/2022/07/20/grib/gens_pgrb2b/gep23/7/2/107/0_259920_0
 
-for yyyymmdd in 20220719; do
+for yyyymmdd in 20220724; do
 #for yyyymmdd in 20220719 20220720 20220721 20220722 20220723 20220724 20220725 20220726; do
 #for yyyymmdd in 20220726 20220725 20220724 20220723 20220722 20220721 20220720 20220719 ; do
 
@@ -29,7 +29,6 @@ for yyyymmdd in 20220719; do
   for mem in $(seq -w 1 10);  do
   #for mem in $(seq -w 11 20);  do
   #for mem in $(seq -w 21 30);  do
-  #for mem in $(seq -w 23 23);  do
     mkdir -p $stagedir/gep${mem}
     cd $stagedir/gep${mem}
     for hh in $(seq -w 0 6 18) ; do

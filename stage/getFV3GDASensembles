@@ -3,8 +3,8 @@
 #PBS -A RRFS-DEV
 #PBS -q dev_transfer
 #PBS -l select=1:ncpus=1:mem=2G
-#PBS -l walltime=05:00:00
-#PBS -j oe -o log.gdasenkf
+#PBS -l walltime=06:00:00
+#PBS -j oe -o log.gdasenkf_0721_0723
 #PBS -N hpss_gdasenkf
 
 set -x
@@ -13,10 +13,13 @@ module load hpss
 YYYY=2022
 MM=07
 
-mkdir -p /lfs/h2/emc/lam/noscrub/emc.lam/rrfs_retro_data/stage/enkf/atm
-cd /lfs/h2/emc/lam/noscrub/emc.lam/rrfs_retro_data/stage/enkf/atm
+#mkdir -p /lfs/h2/emc/lam/noscrub/emc.lam/rrfs_retro_data/stage/enkf/atm
+#cd /lfs/h2/emc/lam/noscrub/emc.lam/rrfs_retro_data/stage/enkf/atm
+mkdir -p /lfs/h2/emc/da/noscrub/donald.e.lippi/rrfs_retro_data/stage/enkf/atm/
+cd /lfs/h2/emc/da/noscrub/donald.e.lippi/rrfs_retro_data/stage/enkf/atm/
 
-for DD in 25; do
+for DD in 21 22 23; do
+#for DD in 21 22 23 24; do
 for HH in 00 06 12 18; do 
 
 
@@ -28,7 +31,7 @@ for HH in 00 06 12 18; do
 HPSSDIR=/NCEPPROD/5year/hpssprod/runhistory/rh${YYYY}/${YYYY}${MM}/${YYYY}${MM}${DD}
 
 #make links
-for k in $(seq -w 1 80); do
+for k in $(seq -w 1 30); do
   #ln -sf ./enkfgdas.${YYYY}${MM}${DD}/${HH}/mem0${k}/gdas.t${HH}z.atmf009.nemsio ${JDATE}.gdas.t${HH}z.atmf009s.mem0${k}.nemsio  # 2020
   ln -sf ./enkfgdas.${YYYY}${MM}${DD}/${HH}/atmos/mem0${k}/gdas.t${HH}z.atmf009.nc ${JDATE}.gdas.t${HH}z.atmf009.mem0${k}.nc     # 2021--now
 done

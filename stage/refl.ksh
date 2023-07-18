@@ -3,8 +3,8 @@
 #PBS -A RRFS-DEV
 #PBS -q dev_transfer
 #PBS -l select=1:ncpus=1:mem=2G
-#PBS -l walltime=05:00:00
-#PBS -j oe -o log.ref
+#PBS -l walltime=06:00:00
+#PBS -j oe -o log.ref_0722_0726
 #PBS -N hpss_ref
 
 set -ax
@@ -13,7 +13,8 @@ set -ax
 # gfs forecast #
 #-----------------# 
 #cd gfs/0p25deg/grib2
-stagedir=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs_retro_data/stage
+#stagedir=/lfs/h2/emc/lam/noscrub/emc.lam/rrfs_retro_data/stage
+stagedir=/lfs/h2/emc/da/noscrub/donald.e.lippi/rrfs_retro_data/stage/
 mkdir -p ${stagedir}/ref_tmp
 cd ${stagedir}/ref_tmp
 
@@ -24,7 +25,7 @@ cd ${stagedir}/ref_tmp
 yy=2022
 mm=07
 
-for dd in $(seq 22 30);
+for dd in $(seq 22 26);
 do
 
  # 2020-Jun. 2022
